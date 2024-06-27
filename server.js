@@ -10,9 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect(
-  "mongodb+srv://mrortegamichael:03sSeZamago2CcRt@cluster0.2lzmtl8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-);
+mongoose.connect(process.env.MONGO_URI);
 
 // Define Schema and Model
 const itemSchema = new mongoose.Schema({
